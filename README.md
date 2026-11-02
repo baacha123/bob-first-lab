@@ -8,6 +8,22 @@
 
 ---
 
+## Before you start — open your workspace
+
+You need just a few things — **no Python, no Node, no setup**:
+
+1. **Open VS Code** (your team installed it, with **IBM Bob** inside).
+2. **Open a folder to work in.** In VS Code: **File → Open Folder…**, then create or pick an empty
+   folder (for example, a new folder called `bob-lab` on your Desktop) and open it. This is where your
+   work will live.
+3. **Open the Bob panel** — click the **IBM Bob** icon in the sidebar so the chat is visible.
+4. **Have any web browser ready** — Chrome, Edge, Safari, whatever you use.
+
+> 🆕 **New to VS Code? Totally fine.** Opening a folder is just like opening one anywhere else:
+> **File → Open Folder…**, pick a folder, done. That empty folder is your workspace for this lab.
+
+---
+
 ## 🚀 Start here — let Bob fetch this lab for you
 
 Your very first Bob task: have Bob grab this lab itself.
@@ -46,18 +62,6 @@ Bob does the work — it reads code, writes code, and runs it for you.
 
 But it does **not** go rogue. Before Bob changes anything, it shows you what it's about to do and
 waits for your **OK**. You are always the boss.
-
----
-
-## Before you start
-
-You only need three things (your team already set up the first two):
-
-1. **VS Code** open, with the **Bob** panel visible on the side.
-2. **This folder** open in VS Code.
-3. **Any web browser** — Chrome, Edge, Safari, whatever you have.
-
-That's it. **No Python, no Node, no setup.** If you can open a web page, you can do this lab.
 
 ---
 
@@ -116,13 +120,22 @@ Ask mode — safe to poke around.
    I want a simple Tip Calculator as ONE self-contained HTML file.
    The user types a bill amount and a tip percent, and it shows the tip and the total.
    Also include a small built-in test that checks the math and shows PASS or FAIL on the page.
-   Plan it out — don't build anything yet.
+   Plan it out step by step and save the plan as tip-calculator.md — don't build anything yet.
    ```
 
-3. Bob writes a step-by-step plan.
+3. Bob writes a step-by-step plan and saves it as **tip-calculator.md**. Open that file from the list
+   on the left.
 
-👉 **Notice:** Bob did **not** write any code yet. It *thought first* and showed you its approach.
-Read the plan — this is your chance to catch anything before a single line is written.
+> 📄 **First time seeing a `.md` file? Turn on Preview.**
+> A markdown (`.md`) file looks like plain text full of `#` and `*` symbols when you open it raw — a
+> bit like French if you've never seen it. To read it the nice way, open the **Preview**: click the
+> little **open-preview icon** (looks like a book/magnifying glass) at the **top-right** of the editor,
+> or press **⌘ + Shift + V** (Mac) / **Ctrl + Shift + V** (Windows). You can flip between the raw text
+> and the clean Preview anytime.
+
+👉 **Notice:** Bob did **not** write any app code yet. It *thought first* and wrote the plan into
+`tip-calculator.md` so you can read it, tweak it, or say "yes, go." This is your chance to catch a
+wrong turn before a single line of code is written.
 
 ✅ **You just learned:** *Plan mode = Bob thinks and designs before building.*
 
@@ -140,13 +153,17 @@ Read the plan — this is your chance to catch anything before a single line is 
 > Vague prompts like "make it better" let Bob guess. Be specific and you'll love the results.
 
 1. Switch the mode to **Agent**.
-2. Paste this and press Enter:
+2. Paste this and press Enter — notice the **`@`** in front of the file name:
 
    ```
-   Looks good — build it now as tip-calculator.html.
+   Looks good — build the app now as tip-calculator.html, following the plan in @tip-calculator.md.
    ```
 
-3. Bob writes the file. **It will show you the new code and ask you to approve it.**
+   > 💬 **What's the `@` for?** Typing **`@`** lets you point Bob at a specific file to use as context.
+   > Here, `@tip-calculator.md` tells Bob *"build exactly what the plan says."* Get used to `@` — it's
+   > how you hand Bob the right file instead of hoping it finds it on its own.
+
+3. Bob reads your plan and writes the file. **It will show you the new code and ask you to approve it.**
 4. Read the change (the green lines are what's being added). **Before you click Approve, say in one
    sentence what this change does.** If you can't, read it again — then click **Approve**.
 
@@ -224,8 +241,8 @@ When you move on to a different job, start a clean slate so Bob isn't carrying o
 In under an hour, with **zero** prior experience, you:
 
 - Explored code safely in **Ask** mode
-- Had Bob design an approach in **Plan** mode
-- Built a real working app in **Agent** mode — approving every change
+- Had Bob design a plan in **Plan** mode — and read it in markdown **Preview**
+- Pointed Bob at that plan with **`@`** and built the app in **Agent** mode — approving every change
 - Saw a **test pass**
 - Made a change, then **undid** one with a checkpoint
 - Started a fresh conversation
