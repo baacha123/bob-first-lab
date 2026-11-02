@@ -244,10 +244,14 @@ what you accepted.
 
 ## What's next
 
-Next time, we'll point this *same* Bob at **IBM i code** (RPG, and more). Here's the good news:
-**everything you just learned stays exactly the same.** The IBM i features are just extra tools
-bolted on top of this same base Bob — same modes, same approvals, same safety net. Once this feels
-natural, the i part is easy.
+**➡️ [Lab 2 — Teach Bob your way (the `.bob` folder: rules & skills)](./LAB2.md)**
+Now that you've got the basics, Lab 2 shows you how to teach Bob your *standards* and give it
+*reusable recipes* — the same mechanism the IBM i version uses. Do it next; it's ~20–30 minutes.
+
+After that, we'll point this *same* Bob at **IBM i code** (RPG, and more). Here's the good news:
+**everything you learn in Labs 1 and 2 stays exactly the same.** The IBM i features are just skills
+and rules built for RPG, bolted on top of this same base Bob — same modes, same approvals, same
+safety net. Once this feels natural, the i part is easy.
 
 ---
 
