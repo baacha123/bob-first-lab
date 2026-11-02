@@ -120,7 +120,7 @@ Ask mode - safe to poke around.
    I want a simple Tip Calculator as ONE self-contained HTML file.
    The user types a bill amount and a tip percent, and it shows the tip and the total.
    Also include a small built-in test that checks the math and shows PASS or FAIL on the page.
-   Plan it out step by step and save the plan as tip-calculator.md — don't build anything yet.
+   Plan it out step by step and save the plan as tip-calculator.md, and don't build anything yet.
    ```
 
 3. Bob writes a step-by-step plan and saves it as **tip-calculator.md**. Open that file from the list
@@ -156,7 +156,7 @@ wrong turn before a single line of code is written.
 2. Paste this and press Enter - notice the **`@`** in front of the file name:
 
    ```
-   Looks good — build the app now as tip-calculator.html, following the plan in @tip-calculator.md.
+   Looks good, build the app now as tip-calculator.html, following the plan in @tip-calculator.md.
    ```
 
    > **What's the `@` for?** Typing **`@`** lets you point Bob at a specific file to use as context.
