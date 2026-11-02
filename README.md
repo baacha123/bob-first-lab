@@ -79,6 +79,11 @@ You'll use all three in this lab, in that order: **Ask → Plan → Agent.**
 
 ## Step 1 — Say hello (Ask mode, nothing can break)
 
+> 💬 **What is Ask mode? (plain English)**
+> Think of Ask mode like walking over to a teammate's desk and asking, *"hey, what does this do?"*
+> They read it and explain — but they never touch your keyboard. Ask mode can **read** your files and
+> answer questions, but it **can't change anything**. That's why we start here: you can't break a thing.
+
 1. Set the mode to **Ask** (dropdown at the bottom of the chat).
 2. Paste this and press Enter:
 
@@ -96,6 +101,13 @@ Ask mode — safe to poke around.
 ---
 
 ## Step 2 — Plan something real (Plan mode)
+
+> 💬 **What is Plan mode? (plain English)**
+> Think of Plan mode like jotting the steps on a notepad *before* you start a job — "first I'll do
+> this, then that." That's exactly what it does: it reads your code, thinks through *how* it would do
+> the work, and writes the plan out as a simple notes file you can open and read (a markdown `.md`
+> file). It does **not** touch your real code — it just hands you the plan so you can check it, tweak
+> it, or say "yes, go." This is your chance to catch a wrong turn *before* a single line of code is written.
 
 1. Switch the mode to **Plan**.
 2. Paste this and press Enter:
@@ -117,6 +129,12 @@ Read the plan — this is your chance to catch anything before a single line is 
 ---
 
 ## Step 3 — Build it (Agent mode) — and approve the change
+
+> 💬 **What is Agent mode? (plain English)**
+> Agent mode is the one that actually rolls up its sleeves and *does* the work — it writes and changes
+> real code files, and can even run them for you. Think of it like handing a trusted teammate your
+> keyboard. Here's the safety part: it shows you **every** change and waits for your **OK** before it's
+> kept. It builds; **you** approve.
 
 > 💡 **A good prompt recipe:** tell Bob *what* you want, *what "done" looks like*, and *what to touch*.
 > Vague prompts like "make it better" let Bob guess. Be specific and you'll love the results.
