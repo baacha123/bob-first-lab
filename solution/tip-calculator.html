@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!--
+  Tip Calculator — reference solution for Lab 1 (instructor copy).
+  Self-contained: no install, no internet. Open directly in any browser.
+  Learners build their own version by talking to Bob; this is just the "answer key".
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tip Calculator</title>
+  <style>
+    body { font-family: system-ui, Arial, sans-serif; max-width: 420px; margin: 40px auto; padding: 0 16px; }
+    h1 { font-size: 1.4rem; }
+    label { display: block; margin: 12px 0 4px; font-weight: 600; }
+    input { width: 100%; padding: 8px; font-size: 1rem; box-sizing: border-box; }
+    .out { margin-top: 20px; padding: 12px; background: #f4f6f8; border-radius: 8px; }
+    .msg { color: #b00020; font-weight: 600; }
+    .test { margin-top: 24px; padding: 10px; border-radius: 8px; font-weight: 700; }
+    .pass { background: #e6f4ea; color: #0a6b2e; }
+    .fail { background: #fdecea; color: #b00020; }
+  </style>
+</head>
+<body>
+  <h1>Tip Calculator</h1>
+
+  <label for="bill">Bill amount ($)</label>
+  <input id="bill" type="number" min="0" step="0.01" placeholder="e.g. 50">
+
+  <label for="pct">Tip percent (%)</label>
+  <input id="pct" type="number" min="0" step="1" value="20">
+
+  <div class="out" id="out">Enter a bill amount to see the tip.</div>
+
+  <div class="test" id="test">Running tests…</div>
+
+  <script>
+    // --- The logic being tested -------------------------------------------
+    // Returns { tip, total } for a bill and tip percent.
+    function calcTip(bill, percent) {
+      const tip = bill * (percent / 100);
+      return { tip: tip, total: bill + tip };
+    }
+
+    // --- Wire up the page --------------------------------------------------
+    function render() {
+      const billRaw = document.getElementById('bill').value;
+      const pct = Number(document.getElementById('pct').value) || 0;
+      const out = document.getElementById('out');
+      const bill = Number(billRaw);
+
+      if (billRaw === '' || bill <= 0) {
+        out.innerHTML = '<span class="msg">Please enter a bill amount</span>';
+        return;
+      }
+      const r = calcTip(bill, pct);
+      out.innerHTML = `Tip: <b>$${r.tip.toFixed(2)}</b> &nbsp;·&nbsp; Total: <b>$${r.total.toFixed(2)}</b>`;
+    }
+    document.getElementById('bill').addEventListener('input', render);
+    document.getElementById('pct').addEventListener('input', render);
+
+    // --- Built-in test ----------------------------------------------------
+    // Simple assertions. Shows PASS only if every check holds.
+    function runTests() {
+      const checks = [
+        { name: '20% of $50 = $10 tip',  got: calcTip(50, 20).tip,   want: 10 },
+        { name: '20% of $50 = $60 total', got: calcTip(50, 20).total, want: 60 },
+        { name: '0% tip = $0',            got: calcTip(80, 0).tip,    want: 0 },
+        { name: '15% of $200 = $30 tip',  got: calcTip(200, 15).tip,  want: 30 },
+      ];
+      const failed = checks.filter(c => Math.abs(c.got - c.want) > 1e-9);
+      const el = document.getElementById('test');
+      if (failed.length === 0) {
+        el.className = 'test pass';
+        el.textContent = `PASS — all ${checks.length} tests passed`;
+      } else {
+        el.className = 'test fail';
+        el.textContent = `FAIL — ${failed.map(f => f.name).join('; ')}`;
+      }
+    }
+    runTests();
+  </script>
+</body>
+</html>
