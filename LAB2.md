@@ -224,6 +224,19 @@ You've learned the core of Bob. There's more under the hood, in **Bob Settings**
 the top-right of the Bob panel). You don't need any of this for day-to-day work, but here's what each
 one is so nothing's a mystery.
 
+### Global rules and skills (personal, across every project)
+
+Everything you made in this lab lives in the project's **`.bob/`** folder, so it only applies to
+*this* workspace. You can also set up **personal** rules and skills that apply **everywhere you use
+Bob**, in any project: put them in your **home folder** instead -
+
+- **`~/.bob/rules/`** - your personal always-on standards
+- **`~/.bob/skills/<name>/SKILL.md`** - your personal reusable recipes
+
+Same files, same format, just a global location. Workspace (`.bob/`) is great for a project's or
+team's standards; global (`~/.bob/`) is great for *your own* preferences and toolkit that travel with
+you everywhere.
+
 ### Modes
 
 Beyond **Ask / Plan / Agent**, you can build your own **custom modes** tuned to a workflow - for

@@ -14,7 +14,9 @@
 
 You need just a few things - **no Python, no Node, no setup**:
 
-1. **Open VS Code** (your team installed it, with **IBM Bob** inside).
+1. **Open VS Code with IBM Bob.** Don't have it yet? Download the **IBM Bob IDE** from
+   **<https://bob.ibm.com>**. (This lab was written for **Bob IDE version 2.3+** - you can check your
+   version at the bottom of **Bob Settings**.)
 2. **Open a folder to work in.** In VS Code: **File → Open Folder…**, then create or pick an empty
    folder (for example, a new folder called `bob-lab` on your Desktop) and open it. This is where your
    work will live.
@@ -168,6 +170,10 @@ Ask mode - safe to poke around.
    for approval first - click **Approve once**.
 
 ![Bob writes the plan and asks to approve the file](./images/01-plan-write-approve.png)
+
+> **Don't skip this approval.** Even in Plan mode, writing the `.md` file is a change to your
+> workspace - so Bob pauses and asks first. Click **Approve once** to let it save the plan. You'll
+> approve the same way every time Bob writes or edits a file.
 
 4. Open **json-formatter.md** from the file list on the left and read it.
 
