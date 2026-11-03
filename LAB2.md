@@ -35,6 +35,8 @@ apply - read every diff before you approve.)
 > A rule is like a team style guide pinned to the wall. You write it once, and Bob follows it on
 > *every* job without being reminded. Rules live as plain files in `.bob/rules/`, and Bob reads them
 > automatically at the start of every task.
+>
+> More in Bob Docs: [Rules](https://bob.ibm.com/docs/ide/configuration/rules)
 
 ### Step 1 - Create a rule (capture the look you asked for by hand in Lab 1)
 
@@ -103,6 +105,8 @@ task, without you repeating yourself.*
 > A skill is a *saved recipe*. Instead of typing the same multi-step request over and over, you write
 > the steps down once as a skill, and Bob runs that recipe whenever the job matches. Skills live in
 > `.bob/skills/<name>/SKILL.md`.
+>
+> More in Bob Docs: [Skills](https://bob.ibm.com/docs/ide/features/skills)
 
 ### Step 3 - Create a skill
 
@@ -222,6 +226,7 @@ one is so nothing's a mystery.
 
 Beyond **Ask / Plan / Agent**, you can build your own **custom modes** tuned to a workflow - for
 example a "review only" mode, or a "docs writer" mode. Each mode decides which tools Bob may use.
+More in Bob Docs: [Modes](https://bob.ibm.com/docs/ide/features/modes)
 
 ### MCP (Model Context Protocol)
 
@@ -267,4 +272,13 @@ code - handy if your team wants to track where Bob helped.
 
 ![The Editor settings tab](./images/02-editor.png)
 
-For how to set any of these up, see **Bob Docs** (the link at the bottom of Settings).
+For how to set any of these up, see the full **[Bob documentation](https://bob.ibm.com/docs/ide)**
+(also linked at the bottom of Settings).
+
+---
+
+## Learn more (Bob Docs)
+
+- **Full documentation:** <https://bob.ibm.com/docs/ide>
+- [Rules](https://bob.ibm.com/docs/ide/configuration/rules) · [Skills](https://bob.ibm.com/docs/ide/features/skills) · [Modes](https://bob.ibm.com/docs/ide/features/modes)
+- [Quickstart](https://bob.ibm.com/docs/ide/getting-started/quickstart) · [Best practices](https://bob.ibm.com/docs/ide/getting-started/best-practices)

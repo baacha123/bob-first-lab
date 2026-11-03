@@ -83,6 +83,8 @@ There's a separate toggle for each kind of action:
 - **Keep Edit and Execute OFF** while you're learning. Those are the ones that change your files and
   run commands, and you want to *see and approve each one*. That's the whole point: you stay in control.
 
+> **More in Bob Docs:** [Best practices](https://bob.ibm.com/docs/ide/getting-started/best-practices) (covers permissions and security controls)
+
 ---
 
 ## What is Bob? (the 10-second version)
@@ -111,6 +113,8 @@ mode from the **Modes** list. (You can also press **⌘ + .** on Mac / **Ctrl + 
 ![Click the plus button, then pick the mode](./images/01-mode-plus-button.png)
 
 You'll use all three in this lab, in that order: **Ask → Plan → Agent.**
+
+> **More in Bob Docs:** [Modes](https://bob.ibm.com/docs/ide/features/modes)
 
 ---
 
@@ -424,3 +428,12 @@ automatically. It's ~20-30 minutes. Do it whenever you're ready.
   message** (Step 7).
 - **Not sure how to do something?** Ask Bob itself - in **Ask** mode, type *"how do I ...?"*. It's happy to explain.
 - **Still stuck?** Post in the team channel - someone will help.
+
+---
+
+## Learn more (Bob Docs)
+
+- **Full documentation:** <https://bob.ibm.com/docs/ide>
+- [Quickstart](https://bob.ibm.com/docs/ide/getting-started/quickstart) · [Best practices](https://bob.ibm.com/docs/ide/getting-started/best-practices)
+- [Modes](https://bob.ibm.com/docs/ide/features/modes) · [Skills](https://bob.ibm.com/docs/ide/features/skills) · [Rules](https://bob.ibm.com/docs/ide/configuration/rules)
+- Ready for more? Continue to **[Lab 2](./LAB2.md)**.
