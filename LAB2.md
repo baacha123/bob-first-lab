@@ -29,29 +29,6 @@ apply - read every diff before you approve.)
 
 ---
 
-## One thing you'll do twice: reload Bob
-
-Here's an important detail: **after you create a new rule or skill, Bob only picks it up when you
-reload the window.** You'll do this twice in this lab. Here's how:
-
-1. Click the **gear icon** (bottom-left of VS Code) → **Command Palette…** (or press **⌘ + Shift + P**
-   / **Ctrl + Shift + P**).
-
-   ![Gear icon, then Command Palette](./images/02-reload-command-palette.png)
-
-2. Type **Reload** and choose **Developer: Reload Window** (the first option).
-
-   ![Type Reload and pick Developer: Reload Window](./images/02-reload-window.png)
-
-3. The window reloads and Bob shows its "Hi, I'm Bob" welcome. **Click your recent task** under
-   **Recent Tasks** to reopen the chat history you were in.
-
-   ![After reload, click your recent task to reopen the chat](./images/02-reopen-task.png)
-
-Keep this in mind - we'll point back to it as "**reload Bob**" below.
-
----
-
 ## Part A - Teach Bob a standing rule (`.bob/rules/`)
 
 > **What is a rule? (plain English)**
@@ -75,7 +52,22 @@ Keep this in mind - we'll point back to it as "**reload Bob**" below.
 
 ![Bob creates .bob/rules/house-style.md](./images/02-rule-created.png)
 
-4. **Reload Bob** now (the three steps above), so it picks up your new rule.
+4. **Now reload Bob so it picks up your new rule.** A new rule (or skill) only takes effect after a
+   window reload. You'll do this whenever you add a rule or a skill. Here's how:
+
+   a. Click the **gear icon** (bottom-left of VS Code) → **Command Palette…** (or press
+      **⌘ + Shift + P** / **Ctrl + Shift + P**).
+
+      ![Gear icon, then Command Palette](./images/02-reload-command-palette.png)
+
+   b. Type **Reload** and choose **Developer: Reload Window** (the first option).
+
+      ![Type Reload and pick Developer: Reload Window](./images/02-reload-window.png)
+
+   c. The window reloads and Bob shows its "Hi, I'm Bob" welcome. **Click your recent task** under
+      **Recent Tasks** to reopen the chat you were in.
+
+      ![After reload, click your recent task to reopen the chat](./images/02-reopen-task.png)
 
 **Notice:** you didn't change any app code - you wrote down a *standard* for Bob to follow.
 
@@ -137,7 +129,8 @@ decides when to use the skill - *a skill with no description is ignored.*
 
 ### Step 4 - Reload, confirm the skill is active, then use it
 
-1. **Reload Bob** again (same three steps), so it picks up your new skill.
+1. **Reload Bob** so it picks up your new skill - the same way you did after creating the rule in
+   Part A, Step 1 (gear icon → Command Palette → **Developer: Reload Window** → click your recent task).
 
 2. Confirm Bob sees it: click the **gear icon** at the **top-right of the Bob panel** → **Skills**.
    Find **new-page** in the list. Notice its **Scope is Workspace** (it only applies to this project),
