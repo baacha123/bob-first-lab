@@ -138,6 +138,13 @@ decides when to use the skill - *a skill with no description is ignored.*
 
    ![Open Skills from the gear icon; new-page is Workspace-scoped and Active](./images/02-skill-settings.png)
 
+   > **Workspace vs Global skills.** The skill you just made is **Workspace** scope - it lives in this
+   > project's `.bob/skills/` and only works here. Want a skill available in *every* project? Make it a
+   > **Global** skill: exact same file and format, just put it in **`~/.bob/skills/<name>/SKILL.md`**
+   > (your home folder) instead of the project's `.bob/skills/`. Workspace skills are great for a
+   > project's standards; global skills are great for your personal toolkit. (Rules work the same way:
+   > `.bob/rules/` is per-project, `~/.bob/rules/` is global.)
+
 3. Now use it. Start a **fresh task** (the **`+`** at the top), make sure you're in **Agent** mode,
    and paste:
 
@@ -202,3 +209,45 @@ That's the difference between using Bob and **making Bob yours**.
 - **`.bob`** is just a folder of plain files you version-control with your project, so your whole team shares them
 
 That's everything you need to be productive with Bob - and to make it work your team's way.
+
+---
+
+## Explore more (optional - for the curious)
+
+You've learned the core of Bob. There's more under the hood, in **Bob Settings** (the **gear icon** at
+the top-right of the Bob panel). You don't need any of this for day-to-day work, but here's what each
+one is so nothing's a mystery.
+
+### Modes
+
+Beyond **Ask / Plan / Agent**, you can build your own **custom modes** tuned to a workflow - for
+example a "review only" mode, or a "docs writer" mode. Each mode decides which tools Bob may use.
+
+### MCP (Model Context Protocol)
+
+**MCP** lets Bob connect to **external tools and data sources** - APIs, databases, documentation -
+so it can do more than just read your project files. Think of it as plugging Bob into the rest of your
+systems. Each MCP server shows as Connected or Disconnected, and can be Global or per-workspace.
+
+![The MCP settings tab](./images/02-mcp.png)
+
+### Plugins
+
+A **plugin** is a packaged bundle of skills, modes, and MCP connections that adds a whole capability
+at once - instead of wiring each piece by hand. There's a **catalog** of approved plugins you can
+browse and install (Jira, Confluence, Chrome DevTools, and more).
+
+![Plugins tab - click View catalog](./images/02-plugins.png)
+
+![The plugin catalog](./images/02-plugin-catalog.png)
+
+### Hooks
+
+A **hook** runs your own shell command (or sends an event) **automatically at a key moment** in a Bob
+session - for example *before a commit* or *after Bob edits a file*. It's handy for enforcing a check
+without having to remember it. Hooks can be **Global** (every workspace) or **Workspace** (just this
+project), the same Global-vs-Workspace idea you saw with skills.
+
+![The Hooks settings tab](./images/02-hooks.png)
+
+For how to set any of these up, see **Bob Docs** (the link at the bottom of Settings).
