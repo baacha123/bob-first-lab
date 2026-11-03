@@ -224,6 +224,10 @@ You've learned the core of Bob. There's more under the hood, in **Bob Settings**
 the top-right of the Bob panel). You don't need any of this for day-to-day work, but here's what each
 one is so nothing's a mystery.
 
+To open **Bob Settings**, click the **gear icon at the top-right of the Bob panel**:
+
+![Click the gear icon at the top-right of the Bob panel to open Bob Settings](./images/gear-open-settings.png)
+
 ### Global rules and skills (personal, across every project)
 
 Everything you made in this lab lives in the project's **`.bob/`** folder, so it only applies to

@@ -129,7 +129,7 @@ without changing a thing. That's Ask mode, and that's you staying in control.
 Bob also has a global **Tool Auto-approval** setting. To find it, click the **gear icon at the
 top-right of the Bob panel** to open **Bob Settings**, then open the **Chat** tab:
 
-<!-- SCREENSHOT: the gear icon at the top-right of the Bob panel that opens Bob Settings (Boris to add) -->
+![Click the gear icon at the top-right of the Bob panel to open Bob Settings](./images/gear-open-settings.png)
 
 This setting lets Bob skip the approval box for certain actions. **Read** is on by default - that's
 safe (reading can't change anything). **Keep Edit and Execute OFF** while you're learning, so you
