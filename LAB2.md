@@ -250,4 +250,21 @@ project), the same Global-vs-Workspace idea you saw with skills.
 
 ![The Hooks settings tab](./images/02-hooks.png)
 
+### Bob findings
+
+**Bob findings** is Bob's built-in code-review helper. It can give you **tips** as you work, **prompt
+you to review** changes you recently committed, make **pull requests discoverable** right in the chat,
+and let you set **review exclusions** (files or folders to skip). A nice way to get a second set of
+eyes without leaving the editor.
+
+![The Bob findings settings tab](./images/02-bob-findings.png)
+
+### Editor
+
+The **Editor** tab has a couple of commit and editor preferences. The main one is **Commit co-author**
+(off by default): turn it on and Bob adds a co-author line to any commit that includes AI-generated
+code - handy if your team wants to track where Bob helped.
+
+![The Editor settings tab](./images/02-editor.png)
+
 For how to set any of these up, see **Bob Docs** (the link at the bottom of Settings).
