@@ -8,7 +8,7 @@
 > single time* you build a page. This lab fixes exactly that: you'll save that preference once, and
 > Bob will apply it on its own.
 >
-> ~20-30 minutes · Keep working in the **same tip-calculator project** from Lab 1.
+> ~20-30 minutes · Keep working in the **same JSON formatter project** from Lab 1.
 
 ---
 
@@ -45,7 +45,7 @@ apply - read every diff before you approve.)
    Create a rule file at .bob/rules/house-style.md.
    The rule: every HTML file in this project should use our house look - a centered card,
    generous spacing, a friendly font, soft colors, and big clear buttons (the same modern
-   style we used on the tip calculator). After you create it, confirm you'll follow it from now on.
+   style we used on the JSON formatter). After you create it, confirm you'll follow it from now on.
    ```
 
 3. Read the change and **Approve**.
@@ -96,7 +96,7 @@ task, without you repeating yourself.*
    1. Ask me for the page title first.
    2. Create a self-contained HTML file named after the title (lowercase).
    3. Follow our .bob/rules/house-style.md look.
-   4. Add a visible <h1> with the title and a footer that says "Tip Calculator project".
+   4. Add a visible <h1> with the title and a footer that says "JSON Tools project".
    ```
 
 2. Read it and **Approve**.

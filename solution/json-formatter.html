@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!--
+  JSON Formatter and Validator - reference solution for Lab 1 (instructor copy).
+  Self-contained: no install, no internet. Open directly in any browser.
+  Learners build their own version by talking to Bob; this is just the answer key.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JSON Formatter and Validator</title>
+  <style>
+    :root { color-scheme: light dark; }
+    body { font-family: system-ui, Arial, sans-serif; max-width: 760px; margin: 32px auto; padding: 0 16px; }
+    h1 { font-size: 1.4rem; }
+    textarea { width: 100%; height: 160px; padding: 10px; font-family: ui-monospace, Menlo, Consolas, monospace;
+               font-size: 0.95rem; box-sizing: border-box; border: 1px solid #c3ccd6; border-radius: 8px; }
+    .row { margin: 12px 0; display: flex; gap: 8px; align-items: center; }
+    button { padding: 8px 16px; font-size: 1rem; border: 0; border-radius: 8px; background: #0e61ff; color: #fff; cursor: pointer; }
+    button.secondary { background: #e6eeff; color: #0e61ff; }
+    pre { background: #f4f6f8; padding: 12px; border-radius: 8px; overflow: auto; min-height: 60px; white-space: pre-wrap; }
+    .status { font-weight: 600; }
+    .ok { color: #0a6b2e; }
+    .err { color: #b00020; }
+    .test { margin-top: 20px; padding: 10px; border-radius: 8px; font-weight: 700; }
+    .pass { background: #e6f4ea; color: #0a6b2e; }
+    .fail { background: #fdecea; color: #b00020; }
+  </style>
+</head>
+<body>
+  <h1>JSON Formatter and Validator</h1>
+  <p>Paste JSON below and click Format. Valid JSON is pretty-printed; invalid JSON shows a clear error.</p>
+
+  <textarea id="input" placeholder='{"name":"Ada","langs":["RPG","SQL"],"active":true}'></textarea>
+
+  <div class="row">
+    <button id="formatBtn">Format</button>
+    <button id="minifyBtn" class="secondary">Minify</button>
+    <span id="status" class="status"></span>
+  </div>
+
+  <pre id="output"></pre>
+
+  <div class="test" id="test">Running tests...</div>
+
+  <script>
+    // --- The logic being tested ------------------------------------------
+    // formatJson(text, indent) -> { ok:true, output } or { ok:false, error }
+    function formatJson(text, indent) {
+      try {
+        const obj = JSON.parse(text);
+        return { ok: true, output: JSON.stringify(obj, null, indent) };
+      } catch (e) {
+        return { ok: false, error: e.message };
+      }
+    }
+
+    // --- Wire up the page -------------------------------------------------
+    function run(indent) {
+      const text = document.getElementById('input').value;
+      const status = document.getElementById('status');
+      const out = document.getElementById('output');
+      if (text.trim() === '') {
+        status.textContent = 'Paste some JSON first';
+        status.className = 'status err';
+        out.textContent = '';
+        return;
+      }
+      const r = formatJson(text, indent);
+      if (r.ok) {
+        status.textContent = 'Valid JSON';
+        status.className = 'status ok';
+        out.textContent = r.output;
+      } else {
+        status.textContent = 'Invalid JSON: ' + r.error;
+        status.className = 'status err';
+        out.textContent = '';
+      }
+    }
+    document.getElementById('formatBtn').addEventListener('click', () => run(2));
+    document.getElementById('minifyBtn').addEventListener('click', () => run(0));
+
+    // --- Built-in test ----------------------------------------------------
+    function runTests() {
+      const checks = [
+        { name: 'valid object formats',   got: formatJson('{"b":2,"a":1}', 2).ok,            want: true },
+        { name: 'pretty output parses',   got: JSON.parse(formatJson('{"b":2,"a":1}', 2).output).a, want: 1 },
+        { name: 'valid array formats',    got: formatJson('[1, 2, 3]', 2).ok,                want: true },
+        { name: 'invalid JSON is caught', got: formatJson('{bad}', 2).ok,                    want: false },
+        { name: 'minify has no newlines', got: formatJson('{"a":1}', 0).output.includes('\n'), want: false },
+      ];
+      const failed = checks.filter(c => c.got !== c.want);
+      const el = document.getElementById('test');
+      if (failed.length === 0) {
+        el.className = 'test pass';
+        el.textContent = 'PASS - all ' + checks.length + ' tests passed';
+      } else {
+        el.className = 'test fail';
+        el.textContent = 'FAIL - ' + failed.map(f => f.name).join('; ');
+      }
+    }
+    runTests();
+  </script>
+</body>
+</html>

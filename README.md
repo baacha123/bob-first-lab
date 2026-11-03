@@ -1,9 +1,9 @@
 # Lab 1 - Your First Hour with Bob
 
 > **Never used an AI coding assistant before? Perfect - this lab is built for exactly that.**
-> By the end you will have talked to Bob in plain English, watched it understand code, plan, build a
-> small working app, make it look good, and add your own feature - and you will have stayed in control
-> the whole time.
+> By the end you will have talked to Bob in plain English and used it to build a real little dev tool:
+> a **JSON formatter and validator**. You'll plan it, build it, make it look good, and extend it - and
+> you will have stayed in control the whole time.
 >
 > ~30-45 minutes · Nothing to install except Bob and a web browser you already have.
 
@@ -121,13 +121,14 @@ Ask mode - safe to poke around.
 2. Paste this and press Enter:
 
    ```
-   I want a simple Tip Calculator as ONE self-contained HTML file.
-   The user types a bill amount and a tip percent, and it shows the tip and the total.
-   Also include a small built-in test that checks the math and shows PASS or FAIL on the page.
-   Plan it out step by step and save the plan as tip-calculator.md, and don't build anything yet.
+   I want a simple JSON formatter and validator as ONE self-contained HTML file.
+   The user pastes JSON into a text box and clicks a Format button. If the JSON is valid, show it
+   pretty-printed with indentation. If it is invalid, show a clear error message instead.
+   Also include a small built-in test that checks the core logic and shows PASS or FAIL on the page.
+   Plan it out step by step and save the plan as json-formatter.md, and don't build anything yet.
    ```
 
-3. Bob writes a step-by-step plan and saves it as **tip-calculator.md**. Open that file from the list
+3. Bob writes a step-by-step plan and saves it as **json-formatter.md**. Open that file from the list
    on the left.
 
 > **First time seeing a `.md` file? Turn on Preview.**
@@ -137,10 +138,10 @@ Ask mode - safe to poke around.
 > or press **⌘ + Shift + V** (Mac) / **Ctrl + Shift + V** (Windows). You can flip between the raw text
 > and the clean Preview anytime.
 
-<!-- SCREENSHOT: tip-calculator.md open in markdown Preview, next to the preview toggle icon -->
+<!-- SCREENSHOT: json-formatter.md open in markdown Preview, next to the preview toggle icon -->
 
 **Notice:** Bob did **not** write any app code yet. It *thought first* and wrote the plan into
-`tip-calculator.md` so you can read it, tweak it, or say "yes, go." This is your chance to catch a
+`json-formatter.md` so you can read it, tweak it, or say "yes, go." This is your chance to catch a
 wrong turn before a single line of code is written.
 
 **You just learned:** *Plan mode = Bob thinks and designs before building.*
@@ -162,11 +163,11 @@ wrong turn before a single line of code is written.
 2. Paste this and press Enter - notice the **`@`** in front of the file name:
 
    ```
-   Looks good, build the app now as tip-calculator.html, following the plan in @tip-calculator.md.
+   Looks good, build the app now as json-formatter.html, following the plan in @json-formatter.md.
    ```
 
    > **What's the `@` for?** Typing **`@`** lets you point Bob at a specific file to use as context.
-   > Here, `@tip-calculator.md` tells Bob *"build exactly what the plan says."* Get used to `@` - it's
+   > Here, `@json-formatter.md` tells Bob *"build exactly what the plan says."* Get used to `@` - it's
    > how you hand Bob the right file instead of hoping it finds it on its own.
 
 3. Bob reads your plan and writes the file. **It will show you the new code and ask you to approve it.**
@@ -187,16 +188,28 @@ for your **OK**. This is the whole idea: Bob does the work, **you stay in contro
 
 ## Step 4 - See it actually work (and watch the test PASS)
 
-1. Find **tip-calculator.html** in the file list on the left.
+1. Find **json-formatter.html** in the file list on the left.
 2. Open it in your browser - right-click the file → **Reveal in Finder/Explorer**, then double-click
    it; or just drag it into a browser tab.
-3. Try it: enter a bill of **50** and a tip of **20%**. It should show a **$10 tip** and a **$60 total**.
-4. Look for the built-in test result on the page - it should say **PASS**.
+3. Paste this into the box and click **Format** - it should come back cleanly indented:
 
-<!-- SCREENSHOT: the tip calculator open in a browser showing the result and the PASS line -->
+   ```
+   {"name":"Ada","langs":["RPG","SQL"],"active":true}
+   ```
 
-**Notice:** you now have a real, working app that you built by *talking* - and a test proves the
-math is right.
+4. Now paste something broken (a missing quote) and click **Format** - you should get a clear
+   **error message**, not a crash:
+
+   ```
+   {"name": Ada}
+   ```
+
+5. Look for the built-in test result on the page - it should say **PASS**.
+
+<!-- SCREENSHOT: the formatter in a browser showing pretty-printed JSON and the PASS line -->
+
+**Notice:** you now have a real, working dev tool that you built by *talking* - and a test proves the
+core logic works.
 
 **You just learned:** *Bob builds real, working things - and a test gives you confidence it works.*
 
@@ -204,23 +217,23 @@ math is right.
 
 ## Step 5 - Make it look good (and notice you asked by hand)
 
-Right now it works, but it probably looks a bit plain. Let's tell Bob how we want it to look.
+It works, but it probably looks plain. Let's tell Bob how we want it to look.
 
 1. Still in **Agent** mode, paste this (change the style words to your taste):
 
    ```
-   Make tip-calculator.html look modern and clean: a centered card, generous spacing,
-   a friendly font, soft colors, and big clear buttons. Keep it a single self-contained
-   HTML file and keep the built-in test.
+   Make json-formatter.html look modern and clean: a centered layout, generous spacing, a monospace
+   font for the JSON, soft colors, and a clear Format button. Keep it a single self-contained HTML
+   file and keep the built-in test.
    ```
 
 2. Read the change and **Approve**. Refresh the browser - it should look a lot nicer.
 
 > **Remember this moment.** You just told Bob your *style preference by hand*. If you built ten more
-> pages, you'd have to repeat it every single time. In **Lab 2** you'll learn how to save that
+> tools, you'd have to repeat it every single time. In **Lab 2** you'll learn how to save that
 > preference once so Bob applies it automatically. (That's the "aha" - keep it in mind.)
 
-<!-- SCREENSHOT: before/after, or just the restyled calculator -->
+<!-- SCREENSHOT: before/after, or just the restyled formatter -->
 
 **You just learned:** *You can shape how Bob builds by describing your style - for now, by hand each time.*
 
@@ -232,13 +245,13 @@ Right now it works, but it probably looks a bit plain. Let's tell Bob how we wan
 2. Paste this and press Enter:
 
    ```
-   Add a rule: if the bill is empty or 0, show the message "Please enter a bill amount"
-   and don't calculate. Update the built-in test to cover this too.
+   Add a Minify button that collapses the JSON onto a single line, and show a friendly message
+   if the text box is empty when a button is clicked. Update the built-in test to cover minify.
    ```
 
 3. **Approve** the change.
-4. Refresh the browser page. Try an empty bill - you should see the new message. The test should
-   still say **PASS**.
+4. Refresh the browser. Try the **Minify** button, and try clicking with an empty box. The test
+   should still say **PASS**.
 
 **Notice:** small change, your approval, done. That's how real work with Bob feels - a
 conversation, one step at a time.
@@ -272,29 +285,32 @@ When you move on to a different job, start a clean slate so Bob isn't carrying o
 
 ---
 
-## Step 9 (optional) - Make it yours: add your own feature
+## Step 9 (open challenge) - Make it a tool you'd actually keep
 
-You've got the hang of it. Now the fun part - **add a feature *you* think is useful.** There's no
-single right answer and no step-by-step here on purpose: this is you driving.
+You've got a working JSON formatter. Now the real part: **turn it into something you'd actually use.**
+No step-by-step here on purpose - this is you driving, the way you will on real work.
 
-Pick one (or invent your own):
+Pick one or more (or invent your own):
 
-- **Split the bill** between a number of people, and show the amount per person.
-- **Round up** the total to the nearest dollar and show the extra as a bonus tip.
+- **Sort keys** alphabetically when formatting.
+- **Collapse / expand** nested objects and arrays.
+- **Search** for a key or value and jump to it.
+- **Copy** the output to the clipboard, or **download** it as a `.json` file.
+- **Syntax highlighting** (keys, strings, numbers in different colors).
+- **Convert** the JSON to CSV or YAML.
+- **Diff** two JSON payloads side by side.
 - **Dark mode** toggle.
-- **Remember the last tip %** the next time the page opens.
-- **Quick-tip buttons** (15% / 18% / 20%) that fill the percent for you.
 
 How to do it:
 
 1. Switch to **Agent** mode.
-2. Describe the feature clearly, including *what "done" looks like* (the prompt recipe from Step 3).
-   Ask Bob to update the built-in test too.
+2. Describe the upgrade clearly, including *what "done" looks like* (the prompt recipe from Step 3).
+   Ask Bob to update the built-in test where it makes sense.
 3. **Read the diff, approve, refresh the browser, and try it.**
 4. If it's not quite right, say what's off and let Bob adjust - or use a **checkpoint** to roll back.
 
-> **In the walkthrough you were shown one example of this.** Now do your own. This is the real skill:
-> have a conversation, stay in control, and shape the result. What will you try?
+> **In the walkthrough you were shown one example of this.** Now do your own - go as deep as you like.
+> This is the real skill: have a conversation, stay in control, and shape the result. What will you build?
 
 **You just learned:** *You can take Bob anywhere from here - describe a goal, review, approve, iterate.*
 
@@ -306,20 +322,20 @@ With **zero** prior experience, you:
 
 - Explored code safely in **Ask** mode
 - Had Bob design a plan in **Plan** mode - and read it in markdown **Preview**
-- Pointed Bob at that plan with **`@`** and built the app in **Agent** mode - approving every change
+- Pointed Bob at that plan with **`@`** and built the tool in **Agent** mode - approving every change
 - Saw a **test pass**
 - Shaped how it looks by describing your style
 - Made a change, then **undid** one with a checkpoint
 - Started a fresh conversation
-- Added **your own feature**
+- Extended it with **your own feature**
 
 **That's the complete core of working with Bob.**
 
 ### Your one deliverable
 
 Write **3-4 sentences** and keep them (or share in the team channel):
-*What did Bob build for you? What feature did you add? What did you approve, and did you reject or
-undo anything - and why?*
+*What did Bob build for you? What upgrade did you add in Step 9? What did you approve, and did you
+reject or undo anything - and why?*
 
 This tiny reflection is the point of the whole lab: you stayed in control and you can say exactly
 what you accepted.
