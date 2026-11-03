@@ -14,9 +14,8 @@
 
 You need just a few things - **no Python, no Node, no setup**:
 
-1. **Open VS Code with IBM Bob.** Don't have it yet? Download the **IBM Bob IDE** from
-   **<https://bob.ibm.com>**. (This lab was written for **Bob IDE version 2.3+** - you can check your
-   version at the bottom of **Bob Settings**.)
+1. **Open VS Code with IBM Bob.** (This lab was written for **Bob IDE version 2.3+** - you can check
+   your version at the bottom of **Bob Settings**.)
 2. **Open a folder to work in.** In VS Code: **File → Open Folder…**, then create or pick an empty
    folder (for example, a new folder called `bob-lab` on your Desktop) and open it. This is where your
    work will live.
@@ -61,41 +60,13 @@ A few ground rules so your first experience goes well:
 
 ---
 
-## How Bob asks permission (important - read this once)
-
-Bob never changes your files or runs a command without asking. When it wants to do something, it pauses
-and shows a **Tools awaiting approval** box with buttons:
-
-- **Approve once** - allow just this one action, right now. (Use this while you're learning, so you
-  see every step.)
-- **Reject** - don't allow it.
-- **Approve read tools for task** / **Approve edit tools for task** - allow that whole category
-  (reading files, or editing files) for the rest of this task, so you aren't clicking Approve every
-  time. Convenient once you trust what Bob is doing.
-
-![The Tools awaiting approval box](./images/01-tools-awaiting-approval.png)
-
-**A note on auto-approve.** Bob has a setting that lets it act *without* asking - called
-**Tool Auto-approval**. Find it at the **gear icon → Settings → Chat** (or **Bob Settings → Chat**).
-There's a separate toggle for each kind of action:
-
-![Tool Auto-approval settings in Bob](./images/01-auto-approve-settings.png)
-
-- **Read** is on by default - that's fine. Reading your files can't change anything.
-- **Keep Edit and Execute OFF** while you're learning. Those are the ones that change your files and
-  run commands, and you want to *see and approve each one*. That's the whole point: you stay in control.
-
-> **More in Bob Docs:** [Auto-approve](https://bob.ibm.com/docs/ide/features/auto-approving-actions)
-
----
-
 ## What is Bob? (the 10-second version)
 
 Bob is a smart teammate that lives inside your editor. You type what you want in plain English, and
 Bob does the work - it reads code, writes code, and runs it for you.
 
 But it does **not** go rogue. Before Bob changes anything, it shows you what it's about to do and
-waits for your **OK** (the approval box above). You are always the boss.
+waits for your **OK** (you'll see exactly how in Step 1). You are always the boss.
 
 ---
 
@@ -134,15 +105,35 @@ You'll use all three in this lab, in that order: **Ask → Plan → Agent.**
    What files are in this project and what is this repo for?
    ```
 
-3. Bob wants to read the folder, so it shows a **Tools awaiting approval** box (a "List Files"
-   action). Click **Approve once**. Bob then reads the folder and answers.
+3. Before Bob reads anything, it pauses and shows a **Tools awaiting approval** box (here, a "List
+   Files" action). This is how Bob *always* works - it asks before it does anything.
+
+![The Tools awaiting approval box: Approve once, Reject, Approve read tools for task](./images/01-tools-awaiting-approval.png)
+
+   You'll see this box throughout the lab. Here's what the buttons mean:
+   - **Approve once** - allow just this one action, right now. **Use this while you're learning**, so you see every step.
+   - **Reject** - don't allow it.
+   - **Approve read tools for task** / **Approve edit tools for task** - allow that whole category (reading, or editing) for the rest of this task, so you aren't clicking Approve every time. Handy once you trust what Bob is doing.
+
+4. Click **Approve once**. Bob reads the folder and answers.
 
 ![Bob explains the project after you approve the read](./images/01-ask-result.png)
 
-**Notice:** it looked at your files and told you about them *without changing anything*. That's
-Ask mode - safe to poke around.
+**Notice:** nothing happened until *you* clicked Approve - and all Bob did was read and explain,
+without changing a thing. That's Ask mode, and that's you staying in control.
 
-**You just learned:** *Ask mode = read-only. Use it to explore and ask questions.*
+**You just learned:** *Ask mode = read-only, and Bob always asks before it acts - you approve each step.*
+
+### Good to know - auto-approve
+
+Bob also has a global **Tool Auto-approval** setting (**gear icon → Settings → Chat**) that lets it
+skip the approval box for certain actions. **Read** is on by default - that's safe (reading can't
+change anything). **Keep Edit and Execute OFF** while you're learning, so you review every file change
+and command.
+
+![Tool Auto-approval settings](./images/01-auto-approve-settings.png)
+
+More in Bob Docs: [Auto-approve](https://bob.ibm.com/docs/ide/features/auto-approving-actions)
 
 ---
 
