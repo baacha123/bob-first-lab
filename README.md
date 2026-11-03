@@ -72,11 +72,15 @@ and shows a **Tools awaiting approval** box with buttons:
 
 ![The Tools awaiting approval box](./images/01-tools-awaiting-approval.png)
 
-> **Keep auto-approve OFF (it is off by default).** There is also a global "auto-approve" setting that
-> lets Bob act without asking at all. For this lab - and in general while you're learning - leave it
-> **off** so you review each change. That's the whole point: you stay in control.
->
-> <!-- SCREENSHOT: Bob auto-approve settings showing them turned OFF (Boris to add) -->
+**A note on auto-approve.** Bob has a setting that lets it act *without* asking - called
+**Tool Auto-approval**. Find it at the **gear icon → Settings → Chat** (or **Bob Settings → Chat**).
+There's a separate toggle for each kind of action:
+
+![Tool Auto-approval settings in Bob](./images/01-auto-approve-settings.png)
+
+- **Read** is on by default - that's fine. Reading your files can't change anything.
+- **Keep Edit and Execute OFF** while you're learning. Those are the ones that change your files and
+  run commands, and you want to *see and approve each one*. That's the whole point: you stay in control.
 
 ---
 
