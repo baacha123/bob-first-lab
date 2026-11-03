@@ -1,11 +1,12 @@
 # Lab 1 - Your First Hour with Bob
 
-> **Never used an AI coding assistant before? Perfect - this lab is built for exactly that.**
-> By the end you will have talked to Bob in plain English and used it to build a real little dev tool:
-> a **JSON formatter and validator**. You'll plan it, build it, make it look good, and extend it - and
-> you will have stayed in control the whole time.
+> **New to AI coding assistants, or just skeptical of them? This lab is built for exactly that - no
+> experience needed.** In about 40 minutes you'll use Bob to build a real dev tool from scratch: a
+> **JSON formatter and validator**. You'll plan it, build it, style it, and extend it, all by talking
+> in plain English and approving every change yourself. The tool is really just the vehicle - what
+> you'll walk away with is how to put Bob to work and stay in control the whole time.
 >
-> ~30-45 minutes · Nothing to install except Bob and a web browser you already have.
+> ~30-45 minutes · No setup - just Bob and a browser you already have.
 
 ---
 
