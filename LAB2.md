@@ -187,6 +187,8 @@ your project in version control - so your whole team gets the same standards and
 > **Bonus - `AGENTS.md`:** there's also a file called `AGENTS.md` you can put at your project's root.
 > Think of it as your project's front-page standards - Bob loads it automatically too. Rules and
 > `AGENTS.md` do a similar job; use whichever fits.
+>
+> More in Bob Docs: [Start a project with /init and AGENTS.md](https://bob.ibm.com/docs/ide/tutorials/start-a-project)
 
 ---
 
@@ -226,7 +228,7 @@ one is so nothing's a mystery.
 
 Beyond **Ask / Plan / Agent**, you can build your own **custom modes** tuned to a workflow - for
 example a "review only" mode, or a "docs writer" mode. Each mode decides which tools Bob may use.
-More in Bob Docs: [Modes](https://bob.ibm.com/docs/ide/features/modes)
+More in Bob Docs: [Custom modes](https://bob.ibm.com/docs/ide/configuration/custom-modes)
 
 ### MCP (Model Context Protocol)
 
@@ -235,6 +237,8 @@ so it can do more than just read your project files. Think of it as plugging Bob
 systems. Each MCP server shows as Connected or Disconnected, and can be Global or per-workspace.
 
 ![The MCP settings tab](./images/02-mcp.png)
+
+More in Bob Docs: [Understanding MCP](https://bob.ibm.com/docs/ide/configuration/mcp/understanding-mcp)
 
 ### Plugins
 
@@ -255,6 +259,8 @@ project), the same Global-vs-Workspace idea you saw with skills.
 
 ![The Hooks settings tab](./images/02-hooks.png)
 
+More in Bob Docs: [Lifecycle hooks](https://bob.ibm.com/docs/ide/configuration/lifecycle-hooks)
+
 ### Bob findings
 
 **Bob findings** is Bob's built-in code-review helper. It can give you **tips** as you work, **prompt
@@ -264,6 +270,8 @@ eyes without leaving the editor.
 
 ![The Bob findings settings tab](./images/02-bob-findings.png)
 
+More in Bob Docs: [Code reviews](https://bob.ibm.com/docs/ide/features/code-reviews)
+
 ### Editor
 
 The **Editor** tab has a couple of commit and editor preferences. The main one is **Commit co-author**
@@ -271,6 +279,8 @@ The **Editor** tab has a couple of commit and editor preferences. The main one i
 code - handy if your team wants to track where Bob helped.
 
 ![The Editor settings tab](./images/02-editor.png)
+
+More in Bob Docs: [Commit messages](https://bob.ibm.com/docs/ide/features/commit-messages)
 
 For how to set any of these up, see the full **[Bob documentation](https://bob.ibm.com/docs/ide)**
 (also linked at the bottom of Settings).
@@ -280,5 +290,6 @@ For how to set any of these up, see the full **[Bob documentation](https://bob.i
 ## Learn more (Bob Docs)
 
 - **Full documentation:** <https://bob.ibm.com/docs/ide>
-- [Rules](https://bob.ibm.com/docs/ide/configuration/rules) · [Skills](https://bob.ibm.com/docs/ide/features/skills) · [Modes](https://bob.ibm.com/docs/ide/features/modes)
+- [Rules](https://bob.ibm.com/docs/ide/configuration/rules) · [Skills](https://bob.ibm.com/docs/ide/features/skills) · [Custom modes](https://bob.ibm.com/docs/ide/configuration/custom-modes) · [AGENTS.md](https://bob.ibm.com/docs/ide/tutorials/start-a-project)
+- [Understanding MCP](https://bob.ibm.com/docs/ide/configuration/mcp/understanding-mcp) · [Lifecycle hooks](https://bob.ibm.com/docs/ide/configuration/lifecycle-hooks)
 - [Quickstart](https://bob.ibm.com/docs/ide/getting-started/quickstart) · [Best practices](https://bob.ibm.com/docs/ide/getting-started/best-practices)

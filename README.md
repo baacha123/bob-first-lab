@@ -83,7 +83,7 @@ There's a separate toggle for each kind of action:
 - **Keep Edit and Execute OFF** while you're learning. Those are the ones that change your files and
   run commands, and you want to *see and approve each one*. That's the whole point: you stay in control.
 
-> **More in Bob Docs:** [Best practices](https://bob.ibm.com/docs/ide/getting-started/best-practices) (covers permissions and security controls)
+> **More in Bob Docs:** [Auto-approve](https://bob.ibm.com/docs/ide/features/auto-approving-actions)
 
 ---
 
@@ -223,6 +223,7 @@ Now, in **Agent** mode:
    > **What's the `@` for?** Typing **`@`** lets you point Bob at a specific file to use as context.
    > Here, `@json-formatter.md` tells Bob *"build exactly what the plan says."* Get used to `@` - it's
    > how you hand Bob the right file instead of hoping it finds it on its own.
+   > More in Bob Docs: [Context mentions](https://bob.ibm.com/docs/ide/features/context-mentions)
 
 2. Bob reads your plan and writes the file. **It shows you the new code and asks you to approve it.**
 3. Read the change (the green lines are what's being added). **Before you click Approve, say in one
@@ -339,6 +340,8 @@ Don't like a change Bob made? You can roll back to how things were before any me
 
 ![Hover a message and click Rollback to this message](./images/01-rollback.png)
 
+> **More in Bob Docs:** [Rollback](https://bob.ibm.com/docs/ide/features/rollback)
+
 **You just learned:** *You can roll back anytime. Experiment freely - you can always go back.*
 
 ---
@@ -436,4 +439,5 @@ automatically. It's ~20-30 minutes. Do it whenever you're ready.
 - **Full documentation:** <https://bob.ibm.com/docs/ide>
 - [Quickstart](https://bob.ibm.com/docs/ide/getting-started/quickstart) · [Best practices](https://bob.ibm.com/docs/ide/getting-started/best-practices)
 - [Modes](https://bob.ibm.com/docs/ide/features/modes) · [Skills](https://bob.ibm.com/docs/ide/features/skills) · [Rules](https://bob.ibm.com/docs/ide/configuration/rules)
+- [Auto-approve](https://bob.ibm.com/docs/ide/features/auto-approving-actions) · [Rollback](https://bob.ibm.com/docs/ide/features/rollback) · [Context mentions](https://bob.ibm.com/docs/ide/features/context-mentions)
 - Ready for more? Continue to **[Lab 2](./LAB2.md)**.
