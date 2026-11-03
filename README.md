@@ -17,13 +17,13 @@ You need just a few things - **no Python, no Node, no setup**:
 2. **Open a folder to work in.** In VS Code: **File → Open Folder…**, then create or pick an empty
    folder (for example, a new folder called `bob-lab` on your Desktop) and open it. This is where your
    work will live.
-3. **Open the Bob panel** - click the **IBM Bob** icon in the sidebar so the chat is visible.
+3. **Open the Bob panel** - click the **Bob icon** at the top right of the window so the chat opens.
 4. **Have any web browser ready** - Chrome, Edge, Safari, whatever you use.
+
+![Open an empty folder, then click the Bob icon](./images/01-setup-bob-icon.png)
 
 > **New to VS Code? Totally fine.** Opening a folder is just like opening one anywhere else:
 > **File → Open Folder…**, pick a folder, done. That empty folder is your workspace for this lab.
-
-<!-- SCREENSHOT: VS Code with an empty folder open and the Bob panel visible on the right -->
 
 ---
 
@@ -39,6 +39,8 @@ then open its README.md and tell me how to start Step 1.
 
 Bob clones the repo and opens this guide. That's it - you just used Bob for the first time.
 
+![Bob clones the repo and tells you how to start](./images/01-clone-prompt.png)
+
 > **Prefer to do it by hand?** In a terminal: `git clone https://github.ibm.com/Boris-Acha/bob-first-lab`
 > - or click the green **Code** button on the GitHub page and **Download ZIP**.
 
@@ -53,7 +55,28 @@ A few ground rules so your first experience goes well:
 - **Work in small steps.** One small change at a time - not one giant request.
 - **If a change goes wrong, don't fight it.** Reject it or undo it, then rephrase. Don't argue with it for 10 turns.
 - **You own what you keep.** Bob helps; you're still responsible for the code you accept.
-- **Leave auto-approvals OFF** (the default). You *want* to see and approve each change - that's the whole point. (More in Bob's Settings; the safe defaults are already set for you.)
+
+---
+
+## How Bob asks permission (important - read this once)
+
+Bob never changes your files or runs a command without asking. When it wants to do something, it pauses
+and shows a **Tools awaiting approval** box with buttons:
+
+- **Approve once** - allow just this one action, right now. (Use this while you're learning, so you
+  see every step.)
+- **Reject** - don't allow it.
+- **Approve read tools for task** / **Approve edit tools for task** - allow that whole category
+  (reading files, or editing files) for the rest of this task, so you aren't clicking Approve every
+  time. Convenient once you trust what Bob is doing.
+
+![The Tools awaiting approval box](./images/01-tools-awaiting-approval.png)
+
+> **Keep auto-approve OFF (it is off by default).** There is also a global "auto-approve" setting that
+> lets Bob act without asking at all. For this lab - and in general while you're learning - leave it
+> **off** so you review each change. That's the whole point: you stay in control.
+>
+> <!-- SCREENSHOT: Bob auto-approve settings showing them turned OFF (Boris to add) -->
 
 ---
 
@@ -63,7 +86,7 @@ Bob is a smart teammate that lives inside your editor. You type what you want in
 Bob does the work - it reads code, writes code, and runs it for you.
 
 But it does **not** go rogue. Before Bob changes anything, it shows you what it's about to do and
-waits for your **OK**. You are always the boss.
+waits for your **OK** (the approval box above). You are always the boss.
 
 ---
 
@@ -77,9 +100,10 @@ Think of them as three hats Bob can wear:
 | **Plan** | Thinks through the work and writes a plan *first* | No (just a plan) |
 | **Agent** | Rolls up its sleeves and actually builds it | Yes - but only after **you approve** |
 
-**To switch modes:** use the dropdown at the bottom of the Bob chat, or press **⌘ + .** (Mac) / **Ctrl + .** (Windows).
+**To switch modes:** click the **`+` (plus) button** at the bottom-left of the Bob chat, then pick the
+mode from the **Modes** list. (You can also press **⌘ + .** on Mac / **Ctrl + .** on Windows.)
 
-<!-- SCREENSHOT: the mode dropdown open, showing Ask / Plan / Agent -->
+![Click the plus button, then pick the mode](./images/01-mode-plus-button.png)
 
 You'll use all three in this lab, in that order: **Ask → Plan → Agent.**
 
@@ -92,14 +116,17 @@ You'll use all three in this lab, in that order: **Ask → Plan → Agent.**
 > They read it and explain - but they never touch your keyboard. Ask mode can **read** your files and
 > answer questions, but it **can't change anything**. That's why we start here: you can't break a thing.
 
-1. Set the mode to **Ask** (dropdown at the bottom of the chat).
+1. Click the **`+`** button at the bottom and set the mode to **Ask**.
 2. Paste this and press Enter:
 
    ```
    What files are in this project and what is this repo for?
    ```
 
-3. Bob reads the folder and answers.
+3. Bob wants to read the folder, so it shows a **Tools awaiting approval** box (a "List Files"
+   action). Click **Approve once**. Bob then reads the folder and answers.
+
+![Bob explains the project after you approve the read](./images/01-ask-result.png)
 
 **Notice:** it looked at your files and told you about them *without changing anything*. That's
 Ask mode - safe to poke around.
@@ -117,7 +144,7 @@ Ask mode - safe to poke around.
 > file). It does **not** touch your real code - it just hands you the plan so you can check it, tweak
 > it, or say "yes, go." This is your chance to catch a wrong turn *before* a single line of code is written.
 
-1. Switch the mode to **Plan**.
+1. Switch the mode to **Plan** (the `+` button again).
 2. Paste this and press Enter:
 
    ```
@@ -128,21 +155,24 @@ Ask mode - safe to poke around.
    Plan it out step by step and save the plan as json-formatter.md, and don't build anything yet.
    ```
 
-3. Bob writes a step-by-step plan and saves it as **json-formatter.md**. Open that file from the list
-   on the left.
+3. Bob writes the plan into a file called **json-formatter.md**. Because that's a file write, it asks
+   for approval first - click **Approve once**.
+
+![Bob writes the plan and asks to approve the file](./images/01-plan-write-approve.png)
+
+4. Open **json-formatter.md** from the file list on the left and read it.
 
 > **First time seeing a `.md` file? Turn on Preview.**
 > A markdown (`.md`) file looks like plain text full of `#` and `*` symbols when you open it raw - a
-> bit like French if you've never seen it. To read it the nice way, open the **Preview**: click the
-> little **open-preview icon** (looks like a book/magnifying glass) at the **top-right** of the editor,
-> or press **⌘ + Shift + V** (Mac) / **Ctrl + Shift + V** (Windows). You can flip between the raw text
-> and the clean Preview anytime.
+> bit like French if you've never seen it. To read it the nice way, click the **open-preview icon** at
+> the **top-right** of the editor (shown by the arrow below), or press **⌘ + Shift + V** (Mac) /
+> **Ctrl + Shift + V** (Windows). You can flip between the raw text and the clean Preview anytime.
 
-<!-- SCREENSHOT: json-formatter.md open in markdown Preview, next to the preview toggle icon -->
+![Click the preview icon to read the plan nicely; Bob also suggests the next step](./images/01-plan-preview.png)
 
 **Notice:** Bob did **not** write any app code yet. It *thought first* and wrote the plan into
-`json-formatter.md` so you can read it, tweak it, or say "yes, go." This is your chance to catch a
-wrong turn before a single line of code is written.
+`json-formatter.md`. It even offers you a suggested next step ("Looks good, I'll switch to Agent mode
+and build it"). This is your chance to catch a wrong turn before a single line of code is written.
 
 **You just learned:** *Plan mode = Bob thinks and designs before building.*
 
@@ -156,11 +186,26 @@ wrong turn before a single line of code is written.
 > keyboard. Here's the safety part: it shows you **every** change and waits for your **OK** before it's
 > kept. It builds; **you** approve.
 
+**Switching to Agent mode:** Bob may still be "processing" (a red **Stop** square shows at the
+bottom-right). While it's processing, you can't open the Modes list. You have two choices:
+
+- **Click Bob's suggested next step** ("Looks good, I'll switch to Agent mode and build it") - easiest, or
+- **Switch yourself:** click the red **Stop** button to stop processing, then click **`+`** and pick
+  **Agent**.
+
+![While processing, click Stop first if you want to switch modes yourself](./images/01-stop-to-switch-mode.png)
+
+> If you stop it to switch modes yourself, Bob may say *"Tool call to ask_followup_question was
+> cancelled."* That's normal - you just interrupted its suggestion. Nothing is broken; carry on.
+>
+> ![The "cancelled" message is normal](./images/01-cancelled-message.png)
+
+Now, in **Agent** mode:
+
 > **A good prompt recipe:** tell Bob *what* you want, *what "done" looks like*, and *what to touch*.
 > Vague prompts like "make it better" let Bob guess. Be specific and you'll love the results.
 
-1. Switch the mode to **Agent**.
-2. Paste this and press Enter - notice the **`@`** in front of the file name:
+1. Paste this and press Enter - notice the **`@`** in front of the file name:
 
    ```
    Looks good, build the app now as json-formatter.html, following the plan in @json-formatter.md.
@@ -170,14 +215,12 @@ wrong turn before a single line of code is written.
    > Here, `@json-formatter.md` tells Bob *"build exactly what the plan says."* Get used to `@` - it's
    > how you hand Bob the right file instead of hoping it finds it on its own.
 
-3. Bob reads your plan and writes the file. **It will show you the new code and ask you to approve it.**
-4. Read the change (the green lines are what's being added). **Before you click Approve, say in one
+2. Bob reads your plan and writes the file. **It shows you the new code and asks you to approve it.**
+3. Read the change (the green lines are what's being added). **Before you click Approve, say in one
    sentence what this change does.** If you can't, read it again - then click **Approve**.
 
 > **This one habit matters most.** People who read the diff before approving keep succeeding with
 > Bob. People who approve blindly eventually get burned and quit. Read first, every time.
-
-<!-- SCREENSHOT: the diff view with the Approve button -->
 
 **Notice:** Bob didn't just do it silently - it showed you *exactly* what it was adding and waited
 for your **OK**. This is the whole idea: Bob does the work, **you stay in control**.
@@ -188,25 +231,37 @@ for your **OK**. This is the whole idea: Bob does the work, **you stay in contro
 
 ## Step 4 - See it actually work (and watch the test PASS)
 
-1. Find **json-formatter.html** in the file list on the left.
-2. Open it in your browser - right-click the file → **Reveal in Finder/Explorer**, then double-click
-   it; or just drag it into a browser tab.
-3. Paste this into the box and click **Format** - it should come back cleanly indented:
+The easiest way to open it is to just ask Bob. Still in **Agent** mode, paste:
+
+```
+please open json-formatter.html in my browser
+```
+
+![Ask Bob to open the HTML](./images/01-open-html-prompt.png)
+
+> **Or open it by hand:** find **json-formatter.html** in the file list, right-click → **Reveal in
+> Finder/Explorer**, then double-click it (or drag it into a browser tab).
+
+Now try it:
+
+1. Paste this into the box and click **Format** - it should come back cleanly indented:
 
    ```
    {"name":"Ada","langs":["RPG","SQL"],"active":true}
    ```
 
-4. Now paste something broken (a missing quote) and click **Format** - you should get a clear
+   ![Valid JSON comes back pretty-printed, and the self-test says PASS](./images/01-result-valid.png)
+
+2. Now paste something broken (a missing quote) and click **Format** - you should get a clear
    **error message**, not a crash:
 
    ```
    {"name": Ada}
    ```
 
-5. Look for the built-in test result on the page - it should say **PASS**.
+   ![Invalid JSON shows a clear error](./images/01-result-invalid.png)
 
-<!-- SCREENSHOT: the formatter in a browser showing pretty-printed JSON and the PASS line -->
+3. Look for the built-in test result on the page - it should say **PASS**.
 
 **Notice:** you now have a real, working dev tool that you built by *talking* - and a test proves the
 core logic works.
@@ -217,23 +272,27 @@ core logic works.
 
 ## Step 5 - Make it look good (and notice you asked by hand)
 
-It works, but it probably looks plain. Let's tell Bob how we want it to look.
+It works, but it probably looks plain. Let's tell Bob how we want it to look - and fix one small thing
+while we're at it.
 
 1. Still in **Agent** mode, paste this (change the style words to your taste):
 
    ```
    Make json-formatter.html look modern and clean: a centered layout, generous spacing, a monospace
    font for the JSON, soft colors, and a clear Format button. Keep it a single self-contained HTML
-   file and keep the built-in test.
+   file and keep the built-in test. Also I noticed the page always says "PASS - all 4 tests passed"
+   even when the JSON I pasted is invalid. Can we also show a per-input status that only says valid
+   when the JSON is actually valid?
    ```
 
-2. Read the change and **Approve**. Refresh the browser - it should look a lot nicer.
+2. Read the change and **Approve**. Open it again - it should look a lot nicer, and now it tells you
+   when *your* input is valid or not, separate from the built-in self-test.
+
+![The restyled, modern formatter](./images/01-restyled.png)
 
 > **Remember this moment.** You just told Bob your *style preference by hand*. If you built ten more
 > tools, you'd have to repeat it every single time. In **Lab 2** you'll learn how to save that
 > preference once so Bob applies it automatically. (That's the "aha" - keep it in mind.)
-
-<!-- SCREENSHOT: before/after, or just the restyled formatter -->
 
 **You just learned:** *You can shape how Bob builds by describing your style - for now, by hand each time.*
 
@@ -241,17 +300,18 @@ It works, but it probably looks plain. Let's tell Bob how we want it to look.
 
 ## Step 6 - Change one thing (Bob iterates)
 
-1. Go back to the Bob chat (still in **Agent** mode).
-2. Paste this and press Enter:
+1. Still in **Agent** mode, paste this:
 
    ```
    Add a Minify button that collapses the JSON onto a single line, and show a friendly message
    if the text box is empty when a button is clicked. Update the built-in test to cover minify.
    ```
 
-3. **Approve** the change.
-4. Refresh the browser. Try the **Minify** button, and try clicking with an empty box. The test
-   should still say **PASS**.
+2. **Approve** the change.
+3. Open it again. Try the **Minify** button, and try clicking with an empty box. The self-test should
+   still say **PASS** (now with more tests).
+
+![Minify button added, with a per-input validity badge](./images/01-minify.png)
 
 **Notice:** small change, your approval, done. That's how real work with Bob feels - a
 conversation, one step at a time.
@@ -260,18 +320,17 @@ conversation, one step at a time.
 
 ---
 
-## Step 7 - Undo with a Checkpoint (your safety net)
+## Step 7 - Undo with a rollback (your safety net)
 
-Don't like a change Bob made? You can always roll back.
+Don't like a change Bob made? You can roll back to how things were before any message.
 
-1. In the Bob chat, look for the **checkpoint** marker next to the message *before* your last change
-   (Bob saves a checkpoint at each step).
-2. Click it and choose **Restore / Revert** to that point.
-3. Your files snap back to how they were. Nothing is ever permanent.
+1. In the Bob chat, hover over the message **before** the change you want to undo.
+2. Click the **rollback icon** (the hover tooltip says **"Rollback to this message"**).
+3. Your files snap back to how they were at that point. Nothing is ever permanent.
 
-<!-- SCREENSHOT: a checkpoint marker with the Restore/Revert option -->
+![Hover a message and click Rollback to this message](./images/01-rollback.png)
 
-**You just learned:** *Checkpoints let you undo. You can experiment freely - you can always go back.*
+**You just learned:** *You can roll back anytime. Experiment freely - you can always go back.*
 
 ---
 
@@ -279,7 +338,7 @@ Don't like a change Bob made? You can always roll back.
 
 When you move on to a different job, start a clean slate so Bob isn't carrying old context:
 
-- Click **New task / New conversation** (the **+** at the top of the Bob chat).
+- Click **New task / New conversation** (the **`+`** at the top of the Bob chat, or **⌘N**).
 
 **You just learned:** *Start a new conversation when you switch to a different task.*
 
@@ -306,8 +365,8 @@ How to do it:
 1. Switch to **Agent** mode.
 2. Describe the upgrade clearly, including *what "done" looks like* (the prompt recipe from Step 3).
    Ask Bob to update the built-in test where it makes sense.
-3. **Read the diff, approve, refresh the browser, and try it.**
-4. If it's not quite right, say what's off and let Bob adjust - or use a **checkpoint** to roll back.
+3. **Read the diff, approve, open it, and try it.**
+4. If it's not quite right, say what's off and let Bob adjust - or **roll back** to try again.
 
 > **In the walkthrough you were shown one example of this.** Now do your own - go as deep as you like.
 > This is the real skill: have a conversation, stay in control, and shape the result. What will you build?
@@ -325,7 +384,7 @@ With **zero** prior experience, you:
 - Pointed Bob at that plan with **`@`** and built the tool in **Agent** mode - approving every change
 - Saw a **test pass**
 - Shaped how it looks by describing your style
-- Made a change, then **undid** one with a checkpoint
+- Made a change, then **rolled one back**
 - Started a fresh conversation
 - Extended it with **your own feature**
 
@@ -335,7 +394,7 @@ With **zero** prior experience, you:
 
 Write **3-4 sentences** and keep them (or share in the team channel):
 *What did Bob build for you? What upgrade did you add in Step 9? What did you approve, and did you
-reject or undo anything - and why?*
+reject or roll anything back - and why?*
 
 This tiny reflection is the point of the whole lab: you stayed in control and you can say exactly
 what you accepted.
@@ -354,7 +413,9 @@ automatically. It's ~20-30 minutes. Do it whenever you're ready.
 
 ## If you get stuck
 
-- **Can't find the mode switch?** It's the dropdown at the bottom of the Bob chat, or press **⌘ + .** / **Ctrl + .**.
-- **Bob did something you didn't expect?** Use a **checkpoint** (Step 7) to roll back.
+- **Can't find the mode switch?** It's the **`+`** button at the bottom-left of the Bob chat (not a
+  dropdown). If Bob is still processing (red Stop square), click **Stop** first, then **`+`**.
+- **Bob did something you didn't expect?** Hover the message before it and click **Rollback to this
+  message** (Step 7).
 - **Not sure how to do something?** Ask Bob itself - in **Ask** mode, type *"how do I ...?"*. It's happy to explain.
 - **Still stuck?** Post in the team channel - someone will help.

@@ -29,6 +29,29 @@ apply - read every diff before you approve.)
 
 ---
 
+## One thing you'll do twice: reload Bob
+
+Here's an important detail: **after you create a new rule or skill, Bob only picks it up when you
+reload the window.** You'll do this twice in this lab. Here's how:
+
+1. Click the **gear icon** (bottom-left of VS Code) → **Command Palette…** (or press **⌘ + Shift + P**
+   / **Ctrl + Shift + P**).
+
+   ![Gear icon, then Command Palette](./images/02-reload-command-palette.png)
+
+2. Type **Reload** and choose **Developer: Reload Window** (the first option).
+
+   ![Type Reload and pick Developer: Reload Window](./images/02-reload-window.png)
+
+3. The window reloads and Bob shows its "Hi, I'm Bob" welcome. **Click your recent task** under
+   **Recent Tasks** to reopen the chat history you were in.
+
+   ![After reload, click your recent task to reopen the chat](./images/02-reopen-task.png)
+
+Keep this in mind - we'll point back to it as "**reload Bob**" below.
+
+---
+
 ## Part A - Teach Bob a standing rule (`.bob/rules/`)
 
 > **What is a rule? (plain English)**
@@ -38,7 +61,7 @@ apply - read every diff before you approve.)
 
 ### Step 1 - Create a rule (capture the look you asked for by hand in Lab 1)
 
-1. Switch to **Agent** mode.
+1. Make sure you're in **Agent** mode (the `+` button at the bottom of the chat).
 2. Paste this and press Enter:
 
    ```
@@ -48,25 +71,31 @@ apply - read every diff before you approve.)
    style we used on the JSON formatter). After you create it, confirm you'll follow it from now on.
    ```
 
-3. Read the change and **Approve**.
+3. Bob writes the rule file - **Approve** the change.
 
-<!-- SCREENSHOT: the new .bob/rules/house-style.md file created -->
+![Bob creates .bob/rules/house-style.md](./images/02-rule-created.png)
+
+4. **Reload Bob** now (the three steps above), so it picks up your new rule.
 
 **Notice:** you didn't change any app code - you wrote down a *standard* for Bob to follow.
 
 ### Step 2 - Watch Bob follow the rule on its own
 
-1. Still in **Agent** mode, paste:
+1. Back in **Agent** mode, paste:
 
    ```
    Create a new file called goodbye.html that shows a friendly "Goodbye!" message.
    ```
 
-2. Read the change before approving, then **Approve**, and open `goodbye.html` in your browser.
+2. Read the change before approving, then **Approve**, and open `goodbye.html` in your browser
+   (or ask Bob: `please open goodbye.html in my browser`).
 3. **Look at it:** it already has the modern house look - the card, the font, the soft colors - even
-   though you never mentioned style in this request. The rule did that.
+   though you never mentioned style in this request. The rule did that. Bob even tells you so:
+   *"You didn't mention style, but I applied the house look from .bob/rules/house-style.md anyway."*
 
-<!-- SCREENSHOT: goodbye.html in the browser, already styled, with no style mentioned in the prompt -->
+![Bob applies the house look automatically because of the rule](./images/02-rule-applied.png)
+
+![The goodbye page, already styled](./images/02-goodbye-rendered.png)
 
 > **This is the payoff from Lab 1, Step 5.** Back then you asked for the modern look by hand, every
 > time. Now it's a rule - Bob applies it automatically on every page. That's the whole point of rules.
@@ -101,23 +130,34 @@ task, without you repeating yourself.*
 
 2. Read it and **Approve**.
 
+![Bob creates .bob/skills/new-page/SKILL.md](./images/02-skill-created.png)
+
 **Notice the two required pieces:** a **name** and a **description**. The description is how Bob
 decides when to use the skill - *a skill with no description is ignored.*
 
-### Step 4 - Use your skill
+### Step 4 - Reload, confirm the skill is active, then use it
 
-1. Start a **fresh task** (the **+** at the top of the chat) so we're starting clean.
-2. In **Agent** mode, paste:
+1. **Reload Bob** again (same three steps), so it picks up your new skill.
+
+2. Confirm Bob sees it: click the **gear icon** at the **top-right of the Bob panel** → **Skills**.
+   Find **new-page** in the list. Notice its **Scope is Workspace** (it only applies to this project),
+   and its **Active toggle** is on (new skills are active by default).
+
+   ![Open Skills from the gear icon; new-page is Workspace-scoped and Active](./images/02-skill-settings.png)
+
+3. Now use it. Start a **fresh task** (the **`+`** at the top), make sure you're in **Agent** mode,
+   and paste:
 
    ```
    Create a new page called About.
    ```
 
-3. Watch what happens: Bob recognizes this matches your **new-page** skill, so it **asks you for the
+4. Watch what happens: Bob recognizes this matches your **new-page** skill, so it **asks you for the
    title first**, then builds the page following your recipe *and* your house-style rule.
-4. Approve, and open the file to see it followed the recipe.
 
-<!-- SCREENSHOT: Bob asking for the title, then the finished About page -->
+   ![Bob uses the skill and asks for the title first](./images/02-skill-fired.png)
+
+5. Answer the question, **Approve**, and open the file to see it followed the recipe.
 
 **You just learned:** *skills in `.bob/skills/` are reusable recipes. Bob picks the right one based
 on its description and follows your steps - every time.*
@@ -162,9 +202,10 @@ That's the difference between using Bob and **making Bob yours**.
 ## Recap - what you now know
 
 - **Ask / Plan / Agent** modes (Lab 1)
-- **Approvals, the diff, checkpoints** - you're always in control (Lab 1)
+- **Approvals, the diff, rollback** - you're always in control (Lab 1)
 - **Rules** (`.bob/rules/`) - always-on standards Bob follows automatically
 - **Skills** (`.bob/skills/`) - reusable recipes Bob applies when they match
+- **Reload the window** after adding a rule or skill so Bob picks it up
 - **`.bob`** is just a folder of plain files you version-control with your project, so your whole team shares them
 
 That's everything you need to be productive with Bob - and to make it work your team's way.
