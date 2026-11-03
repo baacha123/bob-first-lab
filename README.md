@@ -1,8 +1,9 @@
 # Lab 1 - Your First Hour with Bob
 
 > **Never used an AI coding assistant before? Perfect - this lab is built for exactly that.**
-> By the end you will have talked to Bob in plain English, watched it understand code, plan, and
-> build a small working app - and you will have stayed in control the whole time.
+> By the end you will have talked to Bob in plain English, watched it understand code, plan, build a
+> small working app, make it look good, and add your own feature - and you will have stayed in control
+> the whole time.
 >
 > ~30-45 minutes · Nothing to install except Bob and a web browser you already have.
 
@@ -22,21 +23,21 @@ You need just a few things - **no Python, no Node, no setup**:
 > **New to VS Code? Totally fine.** Opening a folder is just like opening one anywhere else:
 > **File → Open Folder…**, pick a folder, done. That empty folder is your workspace for this lab.
 
+<!-- SCREENSHOT: VS Code with an empty folder open and the Bob panel visible on the right -->
+
 ---
 
 ## Start here - let Bob fetch this lab for you
 
-Your very first Bob task: have Bob grab this lab itself.
+With VS Code and Bob open on your empty folder, your very first Bob task is to have Bob grab this lab
+itself. In the Bob chat, paste this and press Enter:
 
-1. Open **VS Code** with the **Bob** panel, in any empty folder.
-2. In the Bob chat, paste this (replace nothing - the link is already filled in):
+```
+Clone the repository https://github.ibm.com/Boris-Acha/bob-first-lab into this folder,
+then open its README.md and tell me how to start Step 1.
+```
 
-   ```
-   Clone the repository https://github.ibm.com/Boris-Acha/bob-first-lab into this folder,
-   then open its README.md and tell me how to start Step 1.
-   ```
-
-3. Bob clones the repo and opens this guide. You just used Bob for the first time.
+Bob clones the repo and opens this guide. That's it - you just used Bob for the first time.
 
 > **Prefer to do it by hand?** In a terminal: `git clone https://github.ibm.com/Boris-Acha/bob-first-lab`
 > - or click the green **Code** button on the GitHub page and **Download ZIP**.
@@ -52,6 +53,7 @@ A few ground rules so your first experience goes well:
 - **Work in small steps.** One small change at a time - not one giant request.
 - **If a change goes wrong, don't fight it.** Reject it or undo it, then rephrase. Don't argue with it for 10 turns.
 - **You own what you keep.** Bob helps; you're still responsible for the code you accept.
+- **Leave auto-approvals OFF** (the default). You *want* to see and approve each change - that's the whole point. (More in Bob's Settings; the safe defaults are already set for you.)
 
 ---
 
@@ -77,6 +79,8 @@ Think of them as three hats Bob can wear:
 
 **To switch modes:** use the dropdown at the bottom of the Bob chat, or press **⌘ + .** (Mac) / **Ctrl + .** (Windows).
 
+<!-- SCREENSHOT: the mode dropdown open, showing Ask / Plan / Agent -->
+
 You'll use all three in this lab, in that order: **Ask → Plan → Agent.**
 
 ---
@@ -97,10 +101,10 @@ You'll use all three in this lab, in that order: **Ask → Plan → Agent.**
 
 3. Bob reads the folder and answers.
 
- **Notice:** it looked at your files and told you about them *without changing anything*. That's
+**Notice:** it looked at your files and told you about them *without changing anything*. That's
 Ask mode - safe to poke around.
 
- **You just learned:** *Ask mode = read-only. Use it to explore and ask questions.*
+**You just learned:** *Ask mode = read-only. Use it to explore and ask questions.*
 
 ---
 
@@ -133,11 +137,13 @@ Ask mode - safe to poke around.
 > or press **⌘ + Shift + V** (Mac) / **Ctrl + Shift + V** (Windows). You can flip between the raw text
 > and the clean Preview anytime.
 
- **Notice:** Bob did **not** write any app code yet. It *thought first* and wrote the plan into
+<!-- SCREENSHOT: tip-calculator.md open in markdown Preview, next to the preview toggle icon -->
+
+**Notice:** Bob did **not** write any app code yet. It *thought first* and wrote the plan into
 `tip-calculator.md` so you can read it, tweak it, or say "yes, go." This is your chance to catch a
 wrong turn before a single line of code is written.
 
- **You just learned:** *Plan mode = Bob thinks and designs before building.*
+**You just learned:** *Plan mode = Bob thinks and designs before building.*
 
 ---
 
@@ -170,10 +176,12 @@ wrong turn before a single line of code is written.
 > **This one habit matters most.** People who read the diff before approving keep succeeding with
 > Bob. People who approve blindly eventually get burned and quit. Read first, every time.
 
- **Notice:** Bob didn't just do it silently - it showed you *exactly* what it was adding and waited
+<!-- SCREENSHOT: the diff view with the Approve button -->
+
+**Notice:** Bob didn't just do it silently - it showed you *exactly* what it was adding and waited
 for your **OK**. This is the whole idea: Bob does the work, **you stay in control**.
 
- **You just learned:** *Agent mode builds - and you approve every change.*
+**You just learned:** *Agent mode builds - and you approve every change.*
 
 ---
 
@@ -183,16 +191,42 @@ for your **OK**. This is the whole idea: Bob does the work, **you stay in contro
 2. Open it in your browser - right-click the file → **Reveal in Finder/Explorer**, then double-click
    it; or just drag it into a browser tab.
 3. Try it: enter a bill of **50** and a tip of **20%**. It should show a **$10 tip** and a **$60 total**.
-4. Look for the built-in test result on the page - it should say **PASS** .
+4. Look for the built-in test result on the page - it should say **PASS**.
 
- **Notice:** you now have a real, working app that you built by *talking* - and a test proves the
+<!-- SCREENSHOT: the tip calculator open in a browser showing the result and the PASS line -->
+
+**Notice:** you now have a real, working app that you built by *talking* - and a test proves the
 math is right.
 
- **You just learned:** *Bob builds real, working things - and a test gives you confidence it works.*
+**You just learned:** *Bob builds real, working things - and a test gives you confidence it works.*
 
 ---
 
-## Step 5 - Change one thing (Bob iterates)
+## Step 5 - Make it look good (and notice you asked by hand)
+
+Right now it works, but it probably looks a bit plain. Let's tell Bob how we want it to look.
+
+1. Still in **Agent** mode, paste this (change the style words to your taste):
+
+   ```
+   Make tip-calculator.html look modern and clean: a centered card, generous spacing,
+   a friendly font, soft colors, and big clear buttons. Keep it a single self-contained
+   HTML file and keep the built-in test.
+   ```
+
+2. Read the change and **Approve**. Refresh the browser - it should look a lot nicer.
+
+> **Remember this moment.** You just told Bob your *style preference by hand*. If you built ten more
+> pages, you'd have to repeat it every single time. In **Lab 2** you'll learn how to save that
+> preference once so Bob applies it automatically. (That's the "aha" - keep it in mind.)
+
+<!-- SCREENSHOT: before/after, or just the restyled calculator -->
+
+**You just learned:** *You can shape how Bob builds by describing your style - for now, by hand each time.*
+
+---
+
+## Step 6 - Change one thing (Bob iterates)
 
 1. Go back to the Bob chat (still in **Agent** mode).
 2. Paste this and press Enter:
@@ -206,14 +240,14 @@ math is right.
 4. Refresh the browser page. Try an empty bill - you should see the new message. The test should
    still say **PASS**.
 
- **Notice:** small change, your approval, done. That's how real work with Bob feels - a
+**Notice:** small change, your approval, done. That's how real work with Bob feels - a
 conversation, one step at a time.
 
- **You just learned:** *Bob improves things step by step, with your approval each time.*
+**You just learned:** *Bob improves things step by step, with your approval each time.*
 
 ---
 
-## Step 6 - Undo with a Checkpoint (your safety net)
+## Step 7 - Undo with a Checkpoint (your safety net)
 
 Don't like a change Bob made? You can always roll back.
 
@@ -222,37 +256,70 @@ Don't like a change Bob made? You can always roll back.
 2. Click it and choose **Restore / Revert** to that point.
 3. Your files snap back to how they were. Nothing is ever permanent.
 
- **You just learned:** *Checkpoints let you undo. You can experiment freely - you can always go back.*
+<!-- SCREENSHOT: a checkpoint marker with the Restore/Revert option -->
+
+**You just learned:** *Checkpoints let you undo. You can experiment freely - you can always go back.*
 
 ---
 
-## Step 7 - Start fresh for your next task
+## Step 8 - Start fresh for your next task
 
 When you move on to a different job, start a clean slate so Bob isn't carrying old context:
 
 - Click **New task / New conversation** (the **+** at the top of the Bob chat).
 
- **You just learned:** *Start a new conversation when you switch to a different task.*
+**You just learned:** *Start a new conversation when you switch to a different task.*
+
+---
+
+## Step 9 (optional) - Make it yours: add your own feature
+
+You've got the hang of it. Now the fun part - **add a feature *you* think is useful.** There's no
+single right answer and no step-by-step here on purpose: this is you driving.
+
+Pick one (or invent your own):
+
+- **Split the bill** between a number of people, and show the amount per person.
+- **Round up** the total to the nearest dollar and show the extra as a bonus tip.
+- **Dark mode** toggle.
+- **Remember the last tip %** the next time the page opens.
+- **Quick-tip buttons** (15% / 18% / 20%) that fill the percent for you.
+
+How to do it:
+
+1. Switch to **Agent** mode.
+2. Describe the feature clearly, including *what "done" looks like* (the prompt recipe from Step 3).
+   Ask Bob to update the built-in test too.
+3. **Read the diff, approve, refresh the browser, and try it.**
+4. If it's not quite right, say what's off and let Bob adjust - or use a **checkpoint** to roll back.
+
+> **In the walkthrough you were shown one example of this.** Now do your own. This is the real skill:
+> have a conversation, stay in control, and shape the result. What will you try?
+
+**You just learned:** *You can take Bob anywhere from here - describe a goal, review, approve, iterate.*
 
 ---
 
 ## You did it!
 
-In under an hour, with **zero** prior experience, you:
+With **zero** prior experience, you:
 
 - Explored code safely in **Ask** mode
 - Had Bob design a plan in **Plan** mode - and read it in markdown **Preview**
 - Pointed Bob at that plan with **`@`** and built the app in **Agent** mode - approving every change
 - Saw a **test pass**
+- Shaped how it looks by describing your style
 - Made a change, then **undid** one with a checkpoint
 - Started a fresh conversation
+- Added **your own feature**
 
-**That's the complete core of working with Bob.** Everything else is built on top of this.
+**That's the complete core of working with Bob.**
 
 ### Your one deliverable
 
 Write **3-4 sentences** and keep them (or share in the team channel):
-*What did Bob build for you? What did you approve, and did you reject or undo anything - and why?*
+*What did Bob build for you? What feature did you add? What did you approve, and did you reject or
+undo anything - and why?*
 
 This tiny reflection is the point of the whole lab: you stayed in control and you can say exactly
 what you accepted.
@@ -261,20 +328,17 @@ what you accepted.
 
 ## What's next
 
-** [Lab 2 - Teach Bob your way (the `.bob` folder: rules & skills)](./LAB2.md)**
-Now that you've got the basics, Lab 2 shows you how to teach Bob your *standards* and give it
-*reusable recipes* - the same mechanism the IBM i version uses. Do it next; it's ~20-30 minutes.
+**[Lab 2 - Teach Bob your way (the `.bob` folder: rules & skills)](./LAB2.md)**
 
-After that, we'll point this *same* Bob at **IBM i code** (RPG, and more). Here's the good news:
-**everything you learn in Labs 1 and 2 stays exactly the same.** The IBM i features are just skills
-and rules built for RPG, bolted on top of this same base Bob - same modes, same approvals, same
-safety net. Once this feels natural, the i part is easy.
+Now that you've got the basics, Lab 2 shows you how to teach Bob your *standards* once (remember
+telling Bob your style by hand in Step 5?) and give it *reusable recipes* - so it works your way
+automatically. It's ~20-30 minutes. Do it whenever you're ready.
 
 ---
 
 ## If you get stuck
 
 - **Can't find the mode switch?** It's the dropdown at the bottom of the Bob chat, or press **⌘ + .** / **Ctrl + .**.
-- **Bob did something you didn't expect?** Use a **checkpoint** (Step 6) to roll back.
+- **Bob did something you didn't expect?** Use a **checkpoint** (Step 7) to roll back.
 - **Not sure how to do something?** Ask Bob itself - in **Ask** mode, type *"how do I ...?"*. It's happy to explain.
 - **Still stuck?** Post in the team channel - someone will help.
