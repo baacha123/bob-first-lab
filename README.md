@@ -12,7 +12,7 @@
 
 ## Before you start - open your workspace
 
-You need just a few things - **no Python, no Node, no setup**:
+You need just a few things:
 
 1. **Open VS Code with IBM Bob.** (This lab was written for **Bob IDE version 2.3+** - you can check
    your version at the bottom of **Bob Settings**.)
@@ -173,8 +173,8 @@ More in Bob Docs: [Auto-approve](https://bob.ibm.com/docs/ide/features/auto-appr
 4. Open **json-formatter.md** from the file list on the left and read it.
 
 > **First time seeing a `.md` file? Turn on Preview.**
-> A markdown (`.md`) file looks like plain text full of `#` and `*` symbols when you open it raw - a
-> bit like French if you've never seen it. To read it the nice way, click the **open-preview icon** at
+> A markdown (`.md`) file looks like plain text full of `#` and `*` symbols when you open it raw.
+> To read it the nice way, click the **open-preview icon** at
 > the **top-right** of the editor (shown by the arrow below), or press **⌘ + Shift + V** (Mac) /
 > **Ctrl + Shift + V** (Windows). You can flip between the raw text and the clean Preview anytime.
 
