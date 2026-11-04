@@ -38,6 +38,9 @@ page as nothing more than a download link. There are two easy ways to get it. Pi
 
 1. Open the lab page: **https://github.com/baacha123/bob-first-lab**
 2. Click the green **Code** button, then **Download ZIP**.
+
+   ![On the GitHub page, click the green Code button, then Download ZIP](./images/01-download-zip.png)
+
 3. Unzip it. Then in VS Code: **File → Open Folder…** and open the unzipped **bob-first-lab** folder.
 
 That's it - no GitHub account, no commands.
