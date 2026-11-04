@@ -35,7 +35,7 @@ With VS Code and Bob open on your empty folder, your very first Bob task is to h
 itself. In the Bob chat, paste this and press Enter:
 
 ```
-Clone the repository https://github.ibm.com/Boris-Acha/bob-first-lab into this folder,
+Clone the repository https://github.com/baacha123/bob-first-lab into this folder,
 then open its README.md and tell me how to start Step 1.
 ```
 
@@ -43,7 +43,7 @@ Bob clones the repo and opens this guide. That's it - you just used Bob for the 
 
 ![Bob clones the repo and tells you how to start](./images/01-clone-prompt.png)
 
-> **Prefer to do it by hand?** In a terminal: `git clone https://github.ibm.com/Boris-Acha/bob-first-lab`
+> **Prefer to do it by hand?** In a terminal: `git clone https://github.com/baacha123/bob-first-lab`
 > - or click the green **Code** button on the GitHub page and **Download ZIP**.
 
 ---
