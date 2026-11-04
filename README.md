@@ -29,22 +29,34 @@ You need just a few things:
 
 ---
 
-## Start here - let Bob fetch this lab for you
+## Start here - get the lab onto your machine
 
-With VS Code and Bob open on your empty folder, your very first Bob task is to have Bob grab this lab
-itself. In the Bob chat, paste this and press Enter:
+This lab lives on a public GitHub page, but **don't worry if you've never used GitHub** - think of that
+page as nothing more than a download link. There are two easy ways to get it. Pick whichever you like.
+
+### Option A - Just download it (simplest)
+
+1. Open the lab page: **https://github.com/baacha123/bob-first-lab**
+2. Click the green **Code** button, then **Download ZIP**.
+3. Unzip it. Then in VS Code: **File → Open Folder…** and open the unzipped **bob-first-lab** folder.
+
+That's it - no GitHub account, no commands.
+
+### Option B - Let Bob grab it for you
+
+With VS Code and Bob open on an empty folder, paste this into the Bob chat and press Enter:
 
 ```
 Clone the repository https://github.com/baacha123/bob-first-lab into this folder,
 then open its README.md and tell me how to start Step 1.
 ```
 
-Bob clones the repo and opens this guide. That's it - you just used Bob for the first time.
+Bob pulls it down and opens this guide - and that's you using Bob for the very first time.
 
-![Bob clones the repo and tells you how to start](./images/01-clone-prompt.png)
+![Bob grabs the repo and tells you how to start](./images/01-clone-prompt.png)
 
-> **Prefer to do it by hand?** In a terminal: `git clone https://github.com/baacha123/bob-first-lab`
-> - or click the green **Code** button on the GitHub page and **Download ZIP**.
+**Either way:** once the **bob-first-lab** folder is open in VS Code with the Bob panel showing, you're
+ready for Step 1.
 
 ---
 
